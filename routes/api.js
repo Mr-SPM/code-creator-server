@@ -33,7 +33,7 @@ function mergeItems(array, key, value) {
 // 读取整个列表
 router.get("/list", function (req, res, next) {
   const db = low(adapter);
-  const rs = db.read().filter({ delete: 0 }).value();
+  const rs = db.read().filter({ delete: 0 }).reverse().value();
   res.send(rs);
 });
 
