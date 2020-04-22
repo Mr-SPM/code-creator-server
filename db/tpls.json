@@ -1,0 +1,36 @@
+[
+  {
+    "name": "demo",
+    "type": "tsx",
+    "version": "1.0.0",
+    "author": "weijie.cao",
+    "description": "这是一段简介",
+    "delete": 0
+  },
+  {
+    "name": "package",
+    "type": "tsx",
+    "version": "1.0.0",
+    "author": "weijie.cao",
+    "description": "多文件package",
+    "delete": 0,
+    "children": [
+      {
+        "name": "index",
+        "type": "tsx",
+        "version": "1.0.0"
+      },
+      {
+        "name": "model",
+        "type": "ts",
+        "version": "1.0.0"
+      }
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "delete": 0,
+    "name": "superman",
+    "author": "weijie.cao"
+  }
+]
