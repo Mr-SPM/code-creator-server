@@ -6,11 +6,11 @@ const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 const resUtils = require("../utils/res");
 
-const adapter = new FileSync(path.join(process.cwd(), "/db/tpls.json"));
+const adapter = new FileSync(path.join(__dirname, "../db/tpls.json"));
 const adapterSetting = new FileSync(
-  path.join(process.cwd(), "/db/setting.json")
+  path.join(__dirname, "../db/setting.json")
 );
-const adapterLog = new FileSync(path.join(process.cwd(), "/db/log.json"));
+const adapterLog = new FileSync(path.join(__dirname, "../db/log.json"));
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "public/uploads/");
