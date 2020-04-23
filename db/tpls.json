@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "version": "1.0.0",
+    "delete": 0,
+    "name": "demo",
+    "description": "这是一个demo",
+    "author": "weijie.cao",
+    "files": [
+      {
+        "template": {
+          "name": "index.tsx",
+          "url": "\\uploads\\index1587610542859.tsx"
+        }
+      },
+      {
+        "template": {
+          "name": "model.tsx",
+          "url": "\\uploads\\model1587610551143.tsx"
+        }
+      }
+    ]
+  }
+]
