@@ -11,7 +11,7 @@ const adapterSetting = new FileSync(path.join(__dirname, '../db/setting.json'));
 const adapterLog = new FileSync(path.join(__dirname, '../db/log.json'));
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'public/uploads/');
+    cb(null, path.join(__dirname, '../public/uploads/'));
   },
   filename: function (req, file, cb) {
     const filenames = file.originalname.split('.');
