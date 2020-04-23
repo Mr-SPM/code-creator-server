@@ -4,7 +4,7 @@ const path = require("path");
 const rimraf = require("rimraf");
 function resetDatebase() {
   try {
-    fs.writeFileSync(path.join(__dirname, "db/tpl.json"), "[]");
+    fs.writeFileSync(path.join(__dirname, "db/tpls.json"), "[]");
     fs.writeFileSync(path.join(__dirname, "db/log.json"), "[]");
     fs.writeFileSync(
       path.join(__dirname, "db/setting.json"),
