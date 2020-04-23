@@ -56,7 +56,7 @@ router.post('/upload', cpUpload, function (req, res, next) {
   res.send({
     success: true,
     data: {
-      url: data.path.replace('public\\', '\\'),
+      url: data.path.substring(data.path.indexOf('uploads\\') - 1),
     },
   });
 });
