@@ -9,6 +9,11 @@
 3. 上传模版  
 ![image](https://github.com/Mr-SPM/pic-box/raw/master/code-creator/upload.png)
 
+# 项目初始化，必须执行
+```
+npm run init
+```
+
 # 本地运行
 ```
 npm i 
@@ -18,6 +23,11 @@ npm start
 # 本地部署 推荐使用pm2
 ```
 pm2 start ./bin/www
+```
+
+# 重置后台
+```
+npm run reset
 ```
 
 # 能start一下就最好啦
