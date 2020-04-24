@@ -53,10 +53,11 @@ function initPackage(data) {
 var cpUpload = upload.single('file');
 router.post('/upload', cpUpload, function (req, res, next) {
   const data = req.file;
+  const path = data.path.replace(/\\/g,'\/');
   res.send({
     success: true,
     data: {
-      url: data.path.replace(/\\/g,'\/').substring(data.path.indexOf(`uploads/`) - 1),
+      url: path.substring(path.indexOf(`uploads/`) - 1),
     },
   });
 });
