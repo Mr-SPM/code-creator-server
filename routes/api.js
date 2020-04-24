@@ -56,10 +56,12 @@ router.post('/upload', cpUpload, function (req, res, next) {
   res.send({
     success: true,
     data: {
-      url: data.path.substring(data.path.indexOf('uploads\\') - 1),
+      url: data.path.replace(/\\/g,'\/').substring(data.path.indexOf(`uploads/`) - 1),
     },
   });
 });
+
+
 // 新增package
 router.post('/savePackage', function (req, res, next) {
   const db = low(adapter);
