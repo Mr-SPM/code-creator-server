@@ -1,31 +1,31 @@
 # codeGenerator
-基于模块代码的代码生成器 (Code generator based on module code)
+基于模块代码的代码生成器
 
-## 使用介绍 (Introduce)
->### 1. 主要操作：利用插槽生成代码 (Operation: generate code using slots)  
+## 使用介绍 
+>### 1. 主要操作：利用插槽生成代码
 <img width="900" height="545" src="https://github.com/Mr-SPM/pic-box/raw/master/code-creator/detail.png"/>
->### 2. 设置规则 (Set up rules)  
-<img width="900" height="646" src="https://github.com/Mr-SPM/pic-box/raw/master/code-creator/rule.png"/>
->### 3. 上传模版 (Upload template)  
+>### 2. 设置规则
+<img width="450" height="323" src="https://github.com/Mr-SPM/pic-box/raw/master/code-creator/rule.png"/>
+>### 3. 上传模版
 <img width="900" height="780" src="https://github.com/Mr-SPM/pic-box/raw/master/code-creator/upload.png"/>
 
-## 项目初始化，必须执行(Necessary steps: initialization)
+## 项目初始化，必须执行
 ```
 npm run init
 ```
 
-## 本地运行(Run locally)
+## 本地运行
 ```
 npm i 
 npm start
 ```
 
-## 本地部署 推荐使用pm2 (Pm2 is recommended for local deployment)
+## 本地部署 推荐使用pm2
 ```
 pm2 start ./bin/www
 ```
 
-## 重置后台 (Reset the background)
+## 重置后台 
 ```
 npm run reset
 ```
