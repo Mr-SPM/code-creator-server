@@ -11,7 +11,7 @@ const adapterSetting = new FileSync(path.join(__dirname, '../db/setting.json'));
 const adapterLog = new FileSync(path.join(__dirname, '../db/log.json'));
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'public/uploads/');
+    cb(null, path.join(__dirname, '../public/uploads/'));
   },
   filename: function (req, file, cb) {
     const filenames = file.originalname.split('.');
@@ -53,13 +53,16 @@ function initPackage(data) {
 var cpUpload = upload.single('file');
 router.post('/upload', cpUpload, function (req, res, next) {
   const data = req.file;
+  const path = data.path.replace(/\\/g,'\/');
   res.send({
     success: true,
     data: {
-      url: data.path.replace('public\\', '\\'),
+      url: path.substring(path.indexOf(`uploads/`) - 1),
     },
   });
 });
+
+
 // 新增package
 router.post('/savePackage', function (req, res, next) {
   const db = low(adapter);

@@ -1,5 +1,0 @@
-{
-  "prefix": "{{",
-  "content": "[A-Za-z0-9_]",
-  "suffix": "}}"
-}
