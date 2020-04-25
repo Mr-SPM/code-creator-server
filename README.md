@@ -30,7 +30,7 @@ pm2 start ./bin/www
 npm run reset
 ```
 
-# 能start一下就最好啦
-# 赏作者一杯咖啡？？？
+### 能start一下就最好啦
+### 赏作者一杯咖啡？？？
 <img width="200" height="200" src="https://github.com/Mr-SPM/pic-box/raw/master/ali_pay.png"/>
 <img width="200" height="200" src="https://github.com/Mr-SPM/pic-box/raw/master/wx.png"/>
