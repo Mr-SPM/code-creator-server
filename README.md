@@ -9,7 +9,7 @@
 <img width="450" height="323" src="https://github.com/Mr-SPM/pic-box/raw/master/code-creator/rule.png"/>
 
 >#### 3. 上传模版
-<img width="900" height="780" src="https://github.com/Mr-SPM/pic-box/raw/master/code-creator/upload.png"/>
+<img width="600" height="520" src="https://github.com/Mr-SPM/pic-box/raw/master/code-creator/upload.png"/>
 
 ## 项目初始化，必须执行
 ```
@@ -32,9 +32,10 @@ pm2 start ./bin/www
 npm run reset
 ```
 
-### 能start一下就最好啦
-### 赏作者一杯咖啡？？？
+
+### 能start一下就最好啦 <img src="https://img.shields.io/github/stars/Mr-SPM/code-creator-server.svg"/>
+### 打赏作者一杯咖啡 :smiley:
 | Ali Pay  | Wechat Pay |
-| ------------- | ------------- |
-| <img width="200" height="200" src="https://github.com/Mr-SPM/pic-box/raw/master/ali_pay.png"/>  | <img width="200" height="200" src="https://github.com/Mr-SPM/pic-box/raw/master/wx.png"/>  |
+|     :---:      |     :---:      |
+|          <img width="200" height="200" src="https://github.com/Mr-SPM/pic-box/raw/master/ali_pay.png"/>          |          <img width="200" height="200" src="https://github.com/Mr-SPM/pic-box/raw/master/wx.png"/>          |
   
