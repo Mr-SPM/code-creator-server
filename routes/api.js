@@ -107,6 +107,33 @@ router.post('/savePackage', function (req, res, next) {
   res.send(resUtils.success('操作成功'));
 });
 
+// 删除package
+router.post('/deletePackage', function (req, res, next) {
+  const db = low(adapter);
+  const db2 = low(adapterLog);
+  const data = req.body;
+  const exist = db.read().find({ delete: 0, name: data.name }).value();
+  if (exist) {
+    // 更新
+    db.read()
+      .find({ delete: 0, name: data.name })
+      .assign({
+        delete: 1,
+      })
+      .write();
+    db2
+      .read()
+      .push({ name: data.name, event: 'delete', createAt: new Date() })
+      .write();
+  } else {
+    res.send({
+      success: false,
+      message: '操作失败',
+    });
+  }
+  res.send(resUtils.success('操作成功'));
+});
+
 //#region 设置
 router.get('/getSetting', function (req, res, next) {
   const db = low(adapterSetting);
