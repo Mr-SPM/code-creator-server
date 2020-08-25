@@ -42,6 +42,11 @@ router.get('/getPackage', function (req, res, next) {
     .read()
     .find({ delete: 0, name: req.query.name, version: req.query.version })
     .value();
+  // 增加密码判断
+  if (rs.password) {
+    rs.needPassword = true;
+    delete rs.password;
+  }
   res.send(resUtils.success(rs));
 });
 
@@ -53,7 +58,7 @@ function initPackage(data) {
 var cpUpload = upload.single('file');
 router.post('/upload', cpUpload, function (req, res, next) {
   const data = req.file;
-  const path = data.path.replace(/\\/g,'\/');
+  const path = data.path.replace(/\\/g, '/');
   res.send({
     success: true,
     data: {
@@ -62,7 +67,6 @@ router.post('/upload', cpUpload, function (req, res, next) {
   });
 });
 
-
 // 新增package
 router.post('/savePackage', function (req, res, next) {
   const db = low(adapter);
@@ -70,6 +74,12 @@ router.post('/savePackage', function (req, res, next) {
   const data = req.body;
   const exist = db.read().find({ delete: 0, name: data.name }).value();
   if (exist) {
+    if (exist.password && exist.password !== data.password) {
+      res.send({
+        success: false,
+        message: '密码错误，编辑失败',
+      });
+    }
     // 更新
     if (versionToNumber(exist.version) >= versionToNumber(data.version)) {
       res.send({
